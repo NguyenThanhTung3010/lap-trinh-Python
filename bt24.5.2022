@@ -1,0 +1,46 @@
+class sinhvien:
+
+    def __init__(self, ten, lop, dien, truong):
+        self.ten=ten
+        self.lop=lop
+        self.diem=dien
+        self.truong=truong
+    def show(self):
+        print(self.ten)
+        print(self.lop)
+        print(self.diem)
+        print(self.truong)
+
+a=[]
+n=int(input("nhập vào số sinh viên cần quản lí: "))
+def nhap():
+    for i in range (n):
+        print("nhập vào thông tin sinh viên thứ", i,":")
+        ten=input("nhập tên của sinh viên: ")
+        lop=input("nhập lớp của sinh viên: ")
+        diem=float(input("nhập điểm của sinh viên: "))
+        truong=input("nhập trường của sinh viên: ")
+        sv=sinhvien(ten, lop, diem, truong)
+        a.append(sv)
+def xuat():
+    i=1
+    for sv in a:
+        print("thông tin của sinh viên thứ", i,":")
+        sv.show()
+        i=i+1
+
+def xepdiem():
+    for i in range(n):
+        for j in range(n):
+            if(a[i].diem > a[j].diem):
+                temp = a[i]
+                a[i] = a[j]
+                a[j] = temp
+def xeploai():
+    for i in range(n):
+        if i.diem > 8:
+            print('xếp loại giỏi')
+
+nhap()
+xepdiem()
+xuat()
