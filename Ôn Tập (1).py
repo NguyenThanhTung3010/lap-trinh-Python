@@ -72,7 +72,8 @@ print("Ước số chung lớn nhất của", a, "và", b, "là:", uscln(a, b));
 #tính BSCNN của a và b
 print("Bội số chung nhỏ nhất của", a, "và", b, "là:", bscnn(a, b));
 
-#Bai5list = []
+#Bai5
+b list = []
 class SinhVien:
  
     def __init__(self, id, name, sex, age):
